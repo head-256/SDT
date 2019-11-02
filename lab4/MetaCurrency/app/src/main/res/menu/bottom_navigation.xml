@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/rate_list_fragment"
+        android:icon="@drawable/ic_bottom_home"
+        android:title="@string/bottom_label_main" />
+    <item
+        android:id="@+id/settings_fragment"
+        android:icon="@drawable/ic_bottom_settings"
+        android:title="@string/bottom_label_settings" />
+</menu>

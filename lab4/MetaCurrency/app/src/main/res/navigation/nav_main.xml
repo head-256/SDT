@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/rate_list_fragment">
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.develop.dubhad.metacurrency.settings.SettingsFragment"
+        android:label="Настройки" >
+    </fragment>
+    <fragment
+        android:id="@+id/rate_list_fragment"
+        android:name="com.develop.dubhad.metacurrency.rate.list.ui.RateListFragment"
+        android:label="USD" >
+        <action
+            android:id="@+id/action_rate_list_fragment_to_rate_info_fragment"
+            app:destination="@id/rate_info_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rate_info_fragment"
+        android:name="com.develop.dubhad.metacurrency.rate.info.ui.RateInfoFragment"
+        android:label="Альфа-банк USD" >
+    </fragment>
+</navigation>

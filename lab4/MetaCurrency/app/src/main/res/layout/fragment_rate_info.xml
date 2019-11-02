@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_normal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/bank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Альфа-банк"
+        android:textAppearance="?attr/textAppearanceHeadline1"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currency_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="USD"
+        android:textAppearance="?attr/textAppearanceHeadline2"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bank_title" />
+
+    <TextView
+        android:id="@+id/currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:text="Доллар США"
+        android:textAppearance="?attr/textAppearanceHeadline3"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/currency_code"
+        app:layout_constraintTop_toTopOf="@id/currency_code" />
+
+    <TextView
+        android:id="@+id/label_selling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Продажа"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currency_code" />
+
+    <TextView
+        android:id="@+id/rate_selling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:drawableEnd="@drawable/ic_arrow_down"
+        android:text="2.033±0.002"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_selling" />
+
+    <include
+        layout="@layout/view_best_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        app:layout_constraintBottom_toBottomOf="@id/rate_selling"
+        app:layout_constraintStart_toEndOf="@id/rate_selling"
+        app:layout_constraintTop_toTopOf="@id/rate_selling" />
+
+    <TextView
+        android:id="@+id/label_buying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Покупка"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rate_selling" />
+
+    <TextView
+        android:id="@+id/rate_buying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:drawableEnd="@drawable/ic_arrow_up"
+        android:text="2.033±0.002"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_buying" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
