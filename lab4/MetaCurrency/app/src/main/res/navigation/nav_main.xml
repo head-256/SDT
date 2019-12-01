@@ -7,19 +7,27 @@
     <fragment
         android:id="@+id/settings_fragment"
         android:name="com.develop.dubhad.metacurrency.settings.SettingsFragment"
-        android:label="Настройки" >
-    </fragment>
+        android:label="Настройки" />
     <fragment
         android:id="@+id/rate_list_fragment"
         android:name="com.develop.dubhad.metacurrency.rate.list.ui.RateListFragment"
-        android:label="USD" >
+        android:label="{label}" >
         <action
             android:id="@+id/action_rate_list_fragment_to_rate_info_fragment"
             app:destination="@id/rate_info_fragment" />
+        <argument
+            android:name="label"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/rate_info_fragment"
         android:name="com.develop.dubhad.metacurrency.rate.info.ui.RateInfoFragment"
-        android:label="Альфа-банк USD" >
+        android:label="{label}">
+        <argument
+            android:name="rate"
+            app:argType="com.develop.dubhad.metacurrency.rate.base.models.domain.FullRate" />
+        <argument
+            android:name="label"
+            app:argType="string" />
     </fragment>
 </navigation>
